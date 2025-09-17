@@ -1,0 +1,21 @@
+axon:
+  axonserver:
+    servers: localhost:8124   # Axon Server gRPC
+    context-root: /
+    # token: yourToken       # n?u b?t authentication
+  eventhandling:
+    processors:
+      default:
+        mode: tracking
+spring:
+  application:
+    name: front-office
+  datasource:
+    url: jdbc:h2:mem:bookingdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
